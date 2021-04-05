@@ -1,0 +1,9 @@
+{
+  "name": "person",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "node-fetch-parser": "^1.0.0",
+    "query-string": "^7.0.0"
+  }
+}
