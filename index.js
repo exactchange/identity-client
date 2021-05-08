@@ -35,6 +35,13 @@ const parse = parser({
     )
   ),
 
+  getUsers: async params => (
+    request(
+      'GET',
+      `${baseURL}/identity/users?${querystring.stringify(params)}`
+    )
+  ),
+
   setUser: async params => (
     request(
       'PUT',
@@ -54,12 +61,17 @@ const parse = parser({
 
 module.exports = {
   setURL: url => baseURL = url,
+
   create: async credentials => (
     parse('getToken', credentials)
   ),
 
   read: async params => (
     parse('getUser', params)
+  ),
+
+  list: async params => (
+    parse('getUsers', params)
   ),
 
   update: async params => (
