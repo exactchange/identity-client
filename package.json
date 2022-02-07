@@ -1,6 +1,6 @@
 {
   "name": "identity-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "node-fetch": "^2.6.1",
     "node-fetch-parser": "^1.0.0",

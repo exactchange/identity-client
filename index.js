@@ -56,6 +56,14 @@ const parse = parser({
       `${baseURL}/identity/user`,
       params
     )
+  ),
+
+  resetPassword: async params => (
+    request(
+      'POST',
+      `${baseURL}/identity/resetPassword`,
+      params
+    )
   )
 });
 
@@ -78,7 +86,7 @@ module.exports = {
     parse('setUser', params)
   ),
 
-  register: async params => (
-    parse('createUser', params)
+  resetPassword: async params => (
+    parse('resetPassword', params)
   )
 };
