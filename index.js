@@ -58,10 +58,6 @@ const parse = parser({
     )
   ),
 
-  register: async params => (
-    parse('createUser', params)
-  ),
-
   resetPassword: async params => (
     request(
       'POST',
@@ -88,6 +84,10 @@ module.exports = {
 
   update: async params => (
     parse('setUser', params)
+  ),
+
+  register: async params => (
+    parse('createUser', params)
   ),
 
   resetPassword: async params => (
