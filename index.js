@@ -58,6 +58,10 @@ const parse = parser({
     )
   ),
 
+  register: async params => (
+    parse('createUser', params)
+  ),
+
   resetPassword: async params => (
     request(
       'POST',
